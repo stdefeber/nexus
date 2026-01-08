@@ -1,6 +1,5 @@
 
-# This is a fork of https://github.com/Intuity/nexus/tree/nxcompile_slang
-
+**This is a fork of [nexus](https://github.com/Intuity/nexus).**
 
 <p align="center">
     <img src="./docs/images/logo_small.png">
