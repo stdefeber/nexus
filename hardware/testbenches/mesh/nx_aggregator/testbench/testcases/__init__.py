@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from .smoke import *
 from .basic import *
 from .passthrough import *
 from .signals import *
