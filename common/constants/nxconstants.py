@@ -40,6 +40,7 @@ class NXConstants:
     MAX_COLUMN_COUNT   : Constant("Maximum number of columns"           ) = 16
     MAX_NODE_MEMORY    : Constant("Maximum 16-bit memory rows per node" ) = 2048
     MAX_NODE_REGISTERS : Constant("Maximum number of registers per node") = 8
+    MOX_NODE_OUTPUTS   : Constant("Maximum number of outputs per node"  ) = 4
     MAX_MESH_OUTPUTS   : Constant("Maximum outputs of the mesh"         ) = MAX_COLUMN_COUNT * 32
 
     # Control plane constants
@@ -109,6 +110,8 @@ class NodeCommand:
     """ Different message types for nodes in the mesh """
     LOAD   : Constant("Load data into the node's memory"       ) = 0
     SIGNAL : Constant("Carries signal state to and from a node") = 1
+    CONTROL : Constant("Set parameters for the node")
+    TRACE   : Constant("Trace from the output state of a node")
 
 @packtype.enum(package=NXConstants, mode=Enum.INDEXED, width=NXConstants.NODE_MEM_SLOT_MODE_WIDTH.value)
 class MemorySlot:
